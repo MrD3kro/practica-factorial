@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Factorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="card">
+        <header class="card__header">
+            <h1>Práctica Factorial</h1>
+            <p>Ingresa un número entero entre <strong>0</strong> y <strong>170</strong>.</p>
+        </header>
+
+        <form class="form" id="factorial-form" novalidate>
+            <label class="form__label" for="numero">Número</label>
+            <input
+                class="form__input"
+                type="text"
+                id="numero"
+                name="numero"
+                placeholder="Ej: 5"
+                inputmode="numeric"
+                autocomplete="off"
+                spellcheck="false"
+                aria-describedby="mensaje"
+            >
+
+            <p class="form__message" id="mensaje" role="status" aria-live="polite"></p>
+
+            <button class="form__button" type="submit" id="calcular" disabled>
+                Calcular factorial
+            </button>
+        </form>
+
+        <section class="result" id="resultado" aria-live="polite" hidden>
+            <span class="result__label" id="resultado-etiqueta"></span>
+            <output class="result__value" id="resultado-valor"></output>
+
+            <span class="result__label result__label--cientifica">Notación científica</span>
+            <output class="result__value result__value--cientifica" id="resultado-cientifico"></output>
+        </section>
+    </main>
+
+    <!-- Usa la función factorial que ya existe en tu app.js -->
+    <script src="app.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
